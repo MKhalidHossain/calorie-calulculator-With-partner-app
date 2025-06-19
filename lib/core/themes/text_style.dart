@@ -49,7 +49,7 @@ class AppText {
   // LG
   static final TextStyle lgMedium_18 = _style(
     fontSize: 18,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w700,
   );
 
   // MD

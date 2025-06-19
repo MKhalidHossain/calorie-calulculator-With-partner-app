@@ -21,13 +21,13 @@ class AppColors {
 
   static const Color textLink = Color(0xFF3B82F6);
 
-  static const Color primaryText = white;
-  static const Color secondaryText = Color(0xFF9CA3AF);
-  static const Color secondaryNote = Color(0xFF9CA3AF);
+  static const Color primaryText = Color(0xFF1F2937);
+  static const Color secondaryText = Color(0xFF4B5563);
+  static const Color secondaryNote = Color(0xFF999999);
 
 
 
-  static const Color prymarybackgrounr = Color(0xFFBAD5F0);
+  static const Color prymarybackgrounr = Color(0xFFBAD5F0);         
   static const Color secondarybackgrounr = Color(0xFFA1BFE5);
   static const Color thirdbackgrounr = Color(0xFFFFF2D0);
 

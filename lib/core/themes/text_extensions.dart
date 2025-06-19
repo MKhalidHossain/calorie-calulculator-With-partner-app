@@ -5,46 +5,46 @@ extension TextStylingExtension on String {
   static const String _fontFamily = 'outfit';
 
   // TextSize 24
-  Text text24DarkGreen() => Text(
-    this,
-    style: const TextStyle(
-      fontSize: 24,
-      fontFamily: _fontFamily,
-      fontWeight: FontWeight.w600, // SemiBold
-      color: Color(0xFF1E3F42),
-    ),
-  );
+  // Text text24DarkGreen() => Text(
+  //   this,
+  //   style: const TextStyle(
+  //     fontSize: 24,
+  //     fontFamily: _fontFamily,
+  //     fontWeight: FontWeight.w600, // SemiBold
+  //     color: Color(0xFF1E3F42),
+  //   ),
+  // );
 
-  Text text24White() => Text(
-    this,
-    style: const TextStyle(
-      fontSize: 24,
-      fontFamily: _fontFamily,
-      fontWeight: FontWeight.w600,
-      color: Color(0xFFFFFFFF),
-    ),
-  );
+  // Text text24White() => Text(
+  //   this,
+  //   style: const TextStyle(
+  //     fontSize: 24,
+  //     fontFamily: _fontFamily,
+  //     fontWeight: FontWeight.w600,
+  //     color: Color(0xFFFFFFFF),
+  //   ),
+  // );
 
-  Text text24Black() => Text(
-    this,
-    style: const TextStyle(
-      fontSize: 24,
-      fontFamily: _fontFamily,
-      fontWeight: FontWeight.w500,
-      color: Color(0xFF000000),
-    ),
-  );
+  // Text text24Black() => Text(
+  //   this,
+  //   style: const TextStyle(
+  //     fontSize: 24,
+  //     fontFamily: _fontFamily,
+  //     fontWeight: FontWeight.w500,
+  //     color: Color(0xFF000000),
+  //   ),
+  // );
 
-  Text text24BlackCenter() => Text(
-    this,
-    textAlign: TextAlign.center,
-    style: const TextStyle(
-      fontSize: 24,
-      fontFamily: _fontFamily,
-      fontWeight: FontWeight.w500,
-      color: Color(0xFF000000),
-    ),
-  );
+  // Text text24BlackCenter() => Text(
+  //   this,
+  //   textAlign: TextAlign.center,
+  //   style: const TextStyle(
+  //     fontSize: 24,
+  //     fontFamily: _fontFamily,
+  //     fontWeight: FontWeight.w500,
+  //     color: Color(0xFF000000),
+  //   ),
+  // );
 
   // TextSize 20
   Text text20Black() => Text(
@@ -62,7 +62,7 @@ extension TextStylingExtension on String {
       fontSize: 20,
       fontFamily: _fontFamily,
       fontWeight: FontWeight.w500,
-      color: Color(0xFF4D4D4D),
+      color: Color(0xFF1F2937),
     ),
   );
 
@@ -103,7 +103,7 @@ extension TextStylingExtension on String {
       fontSize: 16,
       fontFamily: _fontFamily,
       fontWeight: FontWeight.w400,
-      color: Color(0xFF000000),
+      color: Color(0xFF1F2937),
     ),
   );
 
@@ -144,8 +144,8 @@ extension TextStylingExtension on String {
     style: const TextStyle(
       fontSize: 14,
       fontFamily: _fontFamily,
-      fontWeight: FontWeight.w400,
-      color: Color(0xFF000000),
+      fontWeight: FontWeight.w500,
+      color: Color(0xFF1F2937),
     ),
   );
 
