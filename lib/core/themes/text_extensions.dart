@@ -225,7 +225,9 @@ extension TextStylingExtension on String {
   );
 
   Text text12DarkGrey() => Text(
+    maxLines: 15,
     this,
+    textAlign: TextAlign.start,
     style: const TextStyle(
       fontSize: 12,
       fontFamily: _fontFamily,

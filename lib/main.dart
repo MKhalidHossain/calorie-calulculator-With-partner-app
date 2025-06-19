@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shevaandrii/core/themes/app_theme.dart';
 
+import 'features/others/presentation/screens/my_qr.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: AppTheme.themeData,
       title: 'Flutter Demo',
-      home: Scaffold(),
+      home: MyQr(),
     );
   }
 }
