@@ -15,7 +15,7 @@ class AppTheme {
     return ThemeData(
       scaffoldBackgroundColor: Colors.black,
       primaryColor: const Color(0xFF6A11CB),
-      fontFamily: 'Roboto',
+      fontFamily: 'notoSans',
     );
   }
   static Widget withGradientBackground({required Widget child}) {
