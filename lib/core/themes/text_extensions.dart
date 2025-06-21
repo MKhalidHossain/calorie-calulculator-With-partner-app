@@ -286,7 +286,7 @@ extension TextStylingExtension on String {
       fontSize: size,
       fontFamily: _fontFamily,
       fontWeight: FontWeight.w400,
-      color: const Color(0xFF737373),
+      color: const Color(0xFF4B5563),
     ),
   );
 
