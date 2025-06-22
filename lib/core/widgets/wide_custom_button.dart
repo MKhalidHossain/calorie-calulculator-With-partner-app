@@ -6,6 +6,7 @@ class WideCustomButton extends StatelessWidget {
   final bool showIcon;
   final IconData? sufixIcon;
   final double height;
+  final bool isBlure;
 
   const WideCustomButton({
     super.key,
@@ -14,6 +15,7 @@ class WideCustomButton extends StatelessWidget {
     this.showIcon = false,
     this.sufixIcon,
     this.height = 55,
+    this.isBlure = false,
   });
 
   @override
@@ -24,7 +26,10 @@ class WideCustomButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           alignment: Alignment.center,
-          backgroundColor: Colors.white, // Make it red like in your design
+          backgroundColor:
+              isBlure
+                  ? Colors.white.withOpacity(.4)
+                  : Colors.white, // Make it red like in your design
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         ),
@@ -32,19 +37,20 @@ class WideCustomButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            if (showIcon && sufixIcon != null) ...[
+              const SizedBox(width: 5),
+              Icon(sufixIcon, color: Colors.black),
+            ],
+            const SizedBox(width: 20),
             Text(
               text,
               style: const TextStyle(
                 color: Colors.black,
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-                fontFamily: 'outfit',
+                fontFamily: 'notoSans',
               ),
             ),
-            if (showIcon && sufixIcon != null) ...[
-              const SizedBox(width: 5),
-              Icon(sufixIcon, color: Colors.black),
-            ],
           ],
         ),
       ),

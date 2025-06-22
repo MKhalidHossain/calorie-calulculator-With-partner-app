@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        _CalenderForHome(day: 'Sun', date: '8', percent: '50%'),
+                        _CalenderForHome(day: 'Mon', date: '8', percent: '50%'),
                         const SizedBox(width: 10),
                         _CalenderForHome(day: 'Mon', date: '9', percent: '60%'),
                         const SizedBox(width: 10),
@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  CircularPercentWidget(percent: 50, size: 90),
+                                  CircularPercentWidget(percent: 40, size: 90),
                                   const SizedBox(height: 20),
                                   Column(
                                     children: [
@@ -207,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: 20),
                 FoodLogItem(),
 
-                // this item is for testing purposes
+                //this item is for testing purposes
                 // Container(
                 //   width: double.infinity,
                 //   height: 60,

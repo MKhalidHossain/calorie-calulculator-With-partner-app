@@ -270,6 +270,7 @@ extension TextStylingExtension on String {
 
   // TextSize 10
   Text text10DarkGrey() => Text(
+    maxLines: 15,
     this,
     style: const TextStyle(
       fontSize: 10,
