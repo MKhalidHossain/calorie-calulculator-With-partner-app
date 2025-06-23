@@ -2,7 +2,6 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shevaandrii/core/themes/app_theme.dart';
-
 import 'photo_analyze_screen.dart';
 
 class TakePhotoScreen extends StatefulWidget {
