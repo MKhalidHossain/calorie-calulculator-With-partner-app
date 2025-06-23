@@ -11,7 +11,7 @@ class AppColors {
   ///
   static const Color buttonbackgroundcolor = Color(0xFFFEF0D2);
   static const Color lightBlue = Color(0xFFBAD5F0);
-  
+
   static const Color white = Color(0xFFFFFFFF);
 
   /// [Text colors]
@@ -25,9 +25,7 @@ class AppColors {
   static const Color secondaryText = Color(0xFF4B5563);
   static const Color secondaryNote = Color(0xFF999999);
 
-
-
-  static const Color prymarybackgrounr = Color(0xFFBAD5F0);         
+  static const Color prymarybackgrounr = Color(0xFFBAD5F0);
   static const Color secondarybackgrounr = Color(0xFFA1BFE5);
   static const Color thirdbackgrounr = Color(0xFFFFF2D0);
 
@@ -82,6 +80,4 @@ class AppColors {
     stops: [0.2, 7.0],
     transform: GradientRotation(45 * (pi / 180)),
   );
-
-
 }

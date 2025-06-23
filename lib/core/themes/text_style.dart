@@ -4,7 +4,7 @@ import 'app_colors.dart';
 class AppText {
   AppText._(); // Prevent instantiation
 
-  static const String _fontFamily = 'Poppins';
+  static const String _fontFamily = 'notoSans';
 
   static TextStyle _style({
     required double fontSize,

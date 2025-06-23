@@ -2,58 +2,68 @@ import 'package:flutter/material.dart';
 
 extension TextStylingExtension on String {
   // Font family
-  static const String _fontFamily = 'outfit';
+  static const String _fontFamily = 'notoSans';
 
-  // TextSize 24
-  // Text text24DarkGreen() => Text(
-  //   this,
-  //   style: const TextStyle(
-  //     fontSize: 24,
-  //     fontFamily: _fontFamily,
-  //     fontWeight: FontWeight.w600, // SemiBold
-  //     color: Color(0xFF1E3F42),
-  //   ),
-  // );
+  //TextSize 24
+  Text text24DarkBlue() => Text(
+    this,
+    style: const TextStyle(
+      fontSize: 24,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w700, // SemiBold
+      color: Color(0xFF1F2937),
+    ),
+  );
 
-  // Text text24White() => Text(
-  //   this,
-  //   style: const TextStyle(
-  //     fontSize: 24,
-  //     fontFamily: _fontFamily,
-  //     fontWeight: FontWeight.w600,
-  //     color: Color(0xFFFFFFFF),
-  //   ),
-  // );
+  Text text24White() => Text(
+    this,
+    style: const TextStyle(
+      fontSize: 24,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w600,
+      color: Color(0xFFFFFFFF),
+    ),
+  );
 
-  // Text text24Black() => Text(
-  //   this,
-  //   style: const TextStyle(
-  //     fontSize: 24,
-  //     fontFamily: _fontFamily,
-  //     fontWeight: FontWeight.w500,
-  //     color: Color(0xFF000000),
-  //   ),
-  // );
+  Text text24Black() => Text(
+    this,
+    style: const TextStyle(
+      fontSize: 24,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w500,
+      color: Color(0xFF000000),
+    ),
+  );
 
-  // Text text24BlackCenter() => Text(
-  //   this,
-  //   textAlign: TextAlign.center,
-  //   style: const TextStyle(
-  //     fontSize: 24,
-  //     fontFamily: _fontFamily,
-  //     fontWeight: FontWeight.w500,
-  //     color: Color(0xFF000000),
-  //   ),
-  // );
+  Text text24BlackCenter() => Text(
+    this,
+    textAlign: TextAlign.center,
+    style: const TextStyle(
+      fontSize: 24,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w500,
+      color: Color(0xFF000000),
+    ),
+  );
 
   // TextSize 20
-  Text text20Black() => Text(
+  Text text20Black700() => Text(
+    this,
+    style: const TextStyle(
+      fontSize: 20,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w700,
+      color: Color(0xFF1F2937),
+    ),
+  );
+
+  Text text20Black500() => Text(
     this,
     style: const TextStyle(
       fontSize: 20,
       fontFamily: _fontFamily,
       fontWeight: FontWeight.w500,
-      color: Color(0xFF000000),
+      color: Color(0xFF1F2937),
     ),
   );
   Text text20DarkGrey() => Text(
@@ -93,7 +103,17 @@ extension TextStylingExtension on String {
       fontSize: 16,
       fontFamily: _fontFamily,
       fontWeight: FontWeight.w400,
-      color: Color(0xFF737373),
+      color: Color(0xFF4B5563),
+    ),
+  );
+
+  Text text16LightGrey() => Text(
+    this,
+    style: const TextStyle(
+      fontSize: 16,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w400,
+      color: Color(0xFF939393),
     ),
   );
 
@@ -102,7 +122,7 @@ extension TextStylingExtension on String {
     style: const TextStyle(
       fontSize: 16,
       fontFamily: _fontFamily,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w500,
       color: Color(0xFF1F2937),
     ),
   );
@@ -137,6 +157,26 @@ extension TextStylingExtension on String {
     ),
   );
 
+  Text text16DarkBlue() => Text(
+    this,
+    style: const TextStyle(
+      fontSize: 14,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w400,
+      color: Color(0xff1F2937),
+    ),
+  );
+
+  Text text16Blue() => Text(
+    this,
+    style: const TextStyle(
+      fontSize: 14,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w400,
+      color: Color(0xff19649F),
+    ),
+  );
+
   // TextSize 14
   Text text14Black() => Text(
     maxLines: 15,
@@ -155,8 +195,30 @@ extension TextStylingExtension on String {
     style: const TextStyle(
       fontSize: 14,
       fontFamily: _fontFamily,
+      fontWeight: FontWeight.w500,
+      color: Color(0xFF4B5563),
+    ),
+  );
+
+  Text text14LightGrey() => Text(
+    maxLines: 15,
+    this,
+    style: const TextStyle(
+      fontSize: 14,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w500,
+      color: Color(0xFF939393),
+    ),
+  );
+
+  Text text14DarkGrey() => Text(
+    maxLines: 15,
+    this,
+    style: const TextStyle(
+      fontSize: 14,
+      fontFamily: _fontFamily,
       fontWeight: FontWeight.w400,
-      color: Color(0xFF666666),
+      color: Color(0xFF4B5563),
     ),
   );
 
@@ -172,8 +234,22 @@ extension TextStylingExtension on String {
     ),
   );
 
-  Text text12DarkGrey() => Text(
+  Text text12BlackCenter() => Text(
+    textAlign: TextAlign.center,
+    maxLines: 15,
     this,
+    style: const TextStyle(
+      fontSize: 12,
+      fontFamily: _fontFamily,
+      fontWeight: FontWeight.w400,
+      color: Color(0xFF000000),
+    ),
+  );
+
+  Text text12DarkGrey() => Text(
+    maxLines: 15,
+    this,
+    textAlign: TextAlign.start,
     style: const TextStyle(
       fontSize: 12,
       fontFamily: _fontFamily,
@@ -194,6 +270,7 @@ extension TextStylingExtension on String {
 
   // TextSize 10
   Text text10DarkGrey() => Text(
+    maxLines: 15,
     this,
     style: const TextStyle(
       fontSize: 10,
@@ -210,7 +287,7 @@ extension TextStylingExtension on String {
       fontSize: size,
       fontFamily: _fontFamily,
       fontWeight: FontWeight.w400,
-      color: const Color(0xFF737373),
+      color: const Color(0xFF4B5563),
     ),
   );
 
@@ -223,7 +300,6 @@ extension TextStylingExtension on String {
       color: const Color(0xFF438B92),
     ),
   );
-  
 }
 
 
