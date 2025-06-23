@@ -53,12 +53,12 @@ class _MyCustomBottomNavState extends State<MyCustomBottomNav>
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, color: selected ? Colors.blue : Colors.black54),
+        Icon(icon, color: selected ? Colors.blue : Colors.black54, size: 30),
         const SizedBox(height: 4),
         Text(
           label,
           style: TextStyle(
-            fontSize: 12,
+            fontSize: 14,
             color: selected ? Colors.blue : Colors.black54,
             fontWeight: selected ? FontWeight.bold : FontWeight.normal,
           ),
@@ -147,6 +147,8 @@ class _MyCustomBottomNavState extends State<MyCustomBottomNav>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
+      extendBody: true,
       body: Stack(
         children: [
           TabBarView(
@@ -172,103 +174,110 @@ class _MyCustomBottomNavState extends State<MyCustomBottomNav>
       bottomNavigationBar: Stack(
         clipBehavior: Clip.none,
         children: [
-          Container(
-            height: 80,
-            padding: const EdgeInsets.only(left: 12, right: 60),
-            decoration: BoxDecoration(
-              color: const Color(0xFFFDF0D2),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
-                  blurRadius: 16,
-                  offset: const Offset(0, -2),
-                ),
-              ],
-            ),
-            child: Column(
-              children: [
-                const SizedBox(height: 8),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () => _onTabTapped(0),
-                        child: _tabItem(
-                          _icons[0],
-                          _labels[0],
-                          _selectedIndex == 0,
-                          0,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 16), //  Large gap between 1st and 2nd
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () => _onTabTapped(1),
-                        child: _tabItem(
-                          _icons[1],
-                          _labels[1],
-                          _selectedIndex == 1,
-                          1,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 16), //  Large gap between 2nd and 3rd
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () => _onTabTapped(2),
-                        child: _tabItem(
-                          _icons[2],
-                          _labels[2],
-                          _selectedIndex == 2,
-                          2,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 8), // Smaller gap before 4th
-                    const SizedBox(width: 50), // Placeholder for "+" button
-                  ],
-                ),
-              ],
-            ),
-
-            // TabBar(
-            //   controller: _tabController,
-            //   indicatorColor: Colors.transparent,
-            //   labelPadding: const EdgeInsets.symmetric(horizontal: 8),
-            //   tabs: List.generate(_icons.length, (i) {
-            //     return _tabItem(_icons[i], _labels[i], i == _selectedIndex, i);
-            //   }),
-            // ),
-          ),
-
-          // Blur circle background under the + button
-          Positioned(
-            right: 15,
-            top: -34,
+          ClipPath(
+            clipper: TopCircularCutClipper(),
             child: Container(
-              width: 72,
-              height: 72,
+              height: 100,
+              padding: const EdgeInsets.only(left: 12, right: 60),
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white.withOpacity(0.1),
-                boxShadow: const [
+                color: const Color(0xFFFDF0D2),
+                boxShadow: [
                   BoxShadow(
-                    color: Colors.black12,
+                    color: Colors.black.withOpacity(0.05),
                     blurRadius: 16,
-                    spreadRadius: 2,
+                    offset: const Offset(0, -2),
                   ),
                 ],
               ),
+              child: Column(
+                children: [
+                  const SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () => _onTabTapped(0),
+                          child: _tabItem(
+                            _icons[0],
+                            _labels[0],
+                            _selectedIndex == 0,
+                            0,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ), //  Large gap between 1st and 2nd
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () => _onTabTapped(1),
+                          child: _tabItem(
+                            _icons[1],
+                            _labels[1],
+                            _selectedIndex == 1,
+                            1,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ), //  Large gap between 2nd and 3rd
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () => _onTabTapped(2),
+                          child: _tabItem(
+                            _icons[2],
+                            _labels[2],
+                            _selectedIndex == 2,
+                            2,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 8), // Smaller gap before 4th
+                      const SizedBox(width: 50), // Placeholder for "+" button
+                    ],
+                  ),
+                ],
+              ),
+
+              // TabBar(
+              //   controller: _tabController,
+              //   indicatorColor: Colors.transparent,
+              //   labelPadding: const EdgeInsets.symmetric(horizontal: 8),
+              //   tabs: List.generate(_icons.length, (i) {
+              //     return _tabItem(_icons[i], _labels[i], i == _selectedIndex, i);
+              //   }),
+              // ),
             ),
           ),
+
+          // Blur circle background under the + button
+          // Positioned(
+          //   right: 15,
+          //   top: -33,
+          //   child: Container(
+          //     width: 70,
+          //     height: 70,
+          //     decoration: BoxDecoration(
+          //       shape: BoxShape.circle,
+          //       color: Color(0xFFA1BFE5).withOpacity(0.6),
+          //       boxShadow: const [
+          //         BoxShadow(
+          //           color: Colors.black12,
+          //           blurRadius: 16,
+          //           spreadRadius: 1,
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
 
           // Floating + button
           Positioned(
             right: 21,
-            top: -28,
+            top: -34,
             child: GestureDetector(
               onTap: () {
                 setState(() {
@@ -276,8 +285,8 @@ class _MyCustomBottomNavState extends State<MyCustomBottomNav>
                 });
               },
               child: Container(
-                width: 60,
-                height: 60,
+                width: 70,
+                height: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: const Color(0xFFFDF0D2),
@@ -291,7 +300,7 @@ class _MyCustomBottomNavState extends State<MyCustomBottomNav>
                   ],
                 ),
                 child: const Center(
-                  child: Icon(Icons.add, size: 30, color: Colors.black),
+                  child: Icon(Icons.add, size: 40, color: Colors.black87),
                 ),
               ),
             ),
@@ -300,4 +309,61 @@ class _MyCustomBottomNavState extends State<MyCustomBottomNav>
       ),
     );
   }
+}
+
+// class RightCircleClipper extends CustomClipper<Path> {
+//   @override
+//   Path getClip(Size size) {
+//     final path = Path();
+//     const double radius = 40; // adjust based on how deep the cut is
+
+//     // Start from bottom-left
+//     path.moveTo(0, 0);
+//     path.lineTo(size.width - radius, 0);
+
+//     // Curve cut at top-right
+//     path.arcToPoint(
+//       Offset(size.width, radius),
+//       radius: const Radius.circular(radius),
+//       clockwise: false,
+//     );
+
+//     path.lineTo(size.width, size.height);
+//     path.lineTo(0, size.height);
+//     path.close();
+
+//     return path;
+//   }
+
+//   @override
+//   bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
+// }
+
+class TopCircularCutClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    final path = Path();
+    const double radius = 40.0; // Radius of the cut-out
+    final centerX = size.width - 56; // Center the curve horizontally
+
+    path.moveTo(0, 0);
+    path.lineTo(centerX - radius, 0);
+
+    // // Draw the concave semicircle
+    path.arcToPoint(
+      Offset(centerX + radius, 0),
+      radius: Radius.circular(radius),
+      clockwise: false,
+    );
+
+    path.lineTo(size.width, 0);
+    path.lineTo(size.width, size.height);
+    path.lineTo(0, size.height);
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
 }

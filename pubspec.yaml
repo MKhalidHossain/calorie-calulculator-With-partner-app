@@ -28,6 +28,7 @@ dependencies:
   path_provider: ^2.1.2
   path: ^1.9.0
   permission_handler: ^11.3.1
+  proste_bezier_curve: ^2.0.2
   
   
 

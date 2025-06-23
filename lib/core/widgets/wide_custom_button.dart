@@ -28,9 +28,16 @@ class WideCustomButton extends StatelessWidget {
           alignment: Alignment.center,
           backgroundColor:
               isBlure
-                  ? Colors.white.withOpacity(.4)
+                  ? Color(0xffF0F8FF).withOpacity(.6)
                   : Colors.white, // Make it red like in your design
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          shape: RoundedRectangleBorder(
+            // Rounded corners
+            side: BorderSide(
+              color: Color(0xff9CA3AF).withOpacity(0.5),
+              width: 1,
+            ),
+            borderRadius: BorderRadius.circular(8),
+          ),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         ),
         onPressed: onPressed,

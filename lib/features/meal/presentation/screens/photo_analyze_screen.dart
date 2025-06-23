@@ -53,8 +53,12 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
               CircularProgressIndicator(color: Colors.white),
               SizedBox(height: 16),
               Text(
-                'Analyzing...',
+                'Analyzing your food...',
                 style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+              Text(
+                'This will just take a few moment',
+                style: TextStyle(color: Colors.white, fontSize: 14),
               ),
             ],
           ),

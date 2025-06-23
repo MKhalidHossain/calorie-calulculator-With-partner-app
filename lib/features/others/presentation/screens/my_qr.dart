@@ -6,6 +6,7 @@ import 'package:shevaandrii/core/themes/app_theme.dart';
 import 'package:shevaandrii/features/others/presentation/screens/premium_plan.dart';
 
 import '../../../home/presentation/screens/home.dart';
+import '../../../home/presentation/weiget/bottom_nevbar.dart';
 
 class MyQr extends StatefulWidget {
   const MyQr({super.key});
@@ -206,7 +207,7 @@ class MyQrTab extends StatelessWidget {
         const SizedBox(height: 16),
         TextButton(
           onPressed: () {
-            Get.to(HomeScreen());
+            Get.to(MyCustomBottomNav());
           },
           child: const Text("Skip", style: TextStyle(color: Colors.black54)),
         ),

@@ -5,7 +5,7 @@ class AppTheme {
     begin: Alignment.topCenter,
     end: Alignment.bottomLeft,
     colors: [Color(0xFFBAD5F0), Color(0xFFA1BFE5), Color(0xFFFFF2D0)],
-    stops: [0.2, 0.6, 1.0],
+    stops: [0.2, 0.6, .999],
   );
   static ThemeData get themeData {
     return ThemeData(
