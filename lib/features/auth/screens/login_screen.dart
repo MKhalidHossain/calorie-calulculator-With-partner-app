@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:shevaandrii/core/themes/app_colors.dart';
 import 'package:shevaandrii/core/themes/app_gap.dart';
 import 'package:shevaandrii/core/themes/app_theme.dart';
-import 'package:shevaandrii/core/utils/button/button_widget.dart';
-import 'package:shevaandrii/core/utils/button/input_decoration_extensions.dart';
-import 'package:shevaandrii/features/widget/app_logo.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class LoginAccount extends StatefulWidget {
+  const LoginAccount({super.key});
 
-  final TextEditingController _nameController = TextEditingController();
+  @override
+  State<LoginAccount> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginAccount> {
 
   @override
   Widget build(BuildContext context) {
@@ -17,104 +18,100 @@ class LoginScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Gap.h16,
-                Row(
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.arrow_back, color: Colors.black54),
-                      onPressed: () => Navigator.pop(context),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 8, // Increased height for bold effect
-                        margin: EdgeInsets.only(left: 0, right: 8),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.blue[100],
+          child: Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: EdgeInsets.symmetric(horizontal: 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Gap.h16,
+                      Gap.h80,
+                      Text(
+                        "Login Your Account",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87,
                         ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: LinearProgressIndicator(
-                            value: 0.1,
-                            backgroundColor: Colors.transparent,
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              AppColors.buttonbackgroundcolor,
+                      ),
+                      Gap.h160,
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton.icon(
+                          onPressed: () {},
+                          icon: Image.asset(
+                            'assets/images/google.png',
+                            height: 20,
+                          ),
+                          label: Text("Continue With Google"),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.profilebackground,
+                            foregroundColor: AppColors.primaryText,
+                            elevation: 1,
+                            padding: EdgeInsets.symmetric(vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
                             ),
-                            minHeight: 8,
                           ),
                         ),
                       ),
+                      Gap.h12,
+
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton.icon(
+                          onPressed: () {},
+                          icon: Image.asset(
+                            'assets/images/apple.png',
+                            height: 20,
+                          ),
+                          label: Text("Continue With Apple"),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.profilebackground,
+                            foregroundColor: AppColors.primaryText,
+                            elevation: 1,
+                            padding: EdgeInsets.symmetric(vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Gap.h16,
+                      Gap.h32,
+                    ],
+                  ),
+                ),
+              ),
+
+              // Footer
+              Padding(
+                padding: EdgeInsets.only(bottom: 24),
+                child: Column(
+                  children: [
+                    Text(
+                      "Your Profile helps us customize your experience",
+                      style: TextStyle(fontSize: 12, color: Colors.black54),
                     ),
+                    Gap.h4,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.lock, size: 14, color: Colors.green),
+                        SizedBox(width: 4),
+                        Text(
+                          "Your data is secure and private",
+                          style: TextStyle(fontSize: 10, color: Colors.black54),
+                        ),
+                      ],
+                    ),
+                    Gap.h16,
                   ],
                 ),
-                Gap.h32,
-
-                // Logo
-                Center(child: AppLogo()),
-                Gap.h32,
-
-                // Title
-                Center(
-                  child: Text(
-                    "What's your name?",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Gap.h12,
-
-                // Subtitle
-                const Center(
-                  child: Text(
-                    "This helps us personalize your experience",
-                    style: TextStyle(fontSize: 14, color: Colors.black54),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Gap.h32,
-                // TextField
-                TextFormField(
-                  controller: _nameController,
-                  style: TextStyle(color: Colors.transparent),
-                  decoration: context.primaryInputDecoration.copyWith(
-                    hintText: "Enter your name",
-                    hintStyle: TextStyle(color: Colors.grey),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFFF1E287),
-                        width: 2,
-                      ),
-                    ),
-                    focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFFF1E287),
-                        width: 2,
-                      ),
-                    ),
-                  ),
-                ),
-                const Spacer(),
-                context.primaryButton1(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Scaffold()),
-                    );
-                  },
-                  text: "save",
-                ),
-                Gap.h24,
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

@@ -31,13 +31,16 @@ class AppColors {
   static const Color secondarybackgrounr = Color(0xFFA1BFE5);
   static const Color thirdbackgrounr = Color(0xFFFFF2D0);
 
+  static const Color profilebackground = Color(0xFFDAE7F6);
+  static const Color iconbackground = Color(0xFFEBF1F8);
+
   /// [delete]
   // static const Color containerPolicyColor = Color(0xff2A2A2A);
 
   // static const Color primary = Color(0x#2B2B2B);
-  // static const Color primaryDark = Color(0xFF946329);
+  // static const Color primaryDark = Color(0xFFEBF1F8);
 
-  // static const Color secondary = Color(0xFFC0A05C);
+  // static const Color secondary = Color(0xFFFFFF80);
   // static const Color textPrimary = secondary;
   // static const Color textSecondary = textPrimary;
 
