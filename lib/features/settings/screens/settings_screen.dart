@@ -7,6 +7,8 @@ import 'package:shevaandrii/features/settings/screens/privacy_policy_screen.dart
 import 'package:shevaandrii/features/settings/screens/profile_screen.dart';
 import 'package:shevaandrii/features/settings/screens/terms_conditions_screen.dart';
 
+import '../../others/presentation/screens/premium_plan.dart';
+
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
 
@@ -20,8 +22,7 @@ class SettingScreen extends StatelessWidget {
             "Settings",
             style: TextStyle(color: AppColors.primaryText, fontSize: 24),
           ),
-          automaticallyImplyLeading:
-              false,
+          automaticallyImplyLeading: false,
         ),
 
         backgroundColor: Colors.transparent,
@@ -166,7 +167,7 @@ class SettingScreen extends StatelessWidget {
                   size: 28,
                 ),
               ),
-   
+
               title: Text(
                 "Choose Your Plan",
                 style: TextStyle(
@@ -191,7 +192,7 @@ class SettingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Scaffold()),
+                  MaterialPageRoute(builder: (context) => PremiumPlan()),
                 );
               },
             ),
@@ -327,7 +328,9 @@ class SettingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NotificationsScreen()),
+                  MaterialPageRoute(
+                    builder: (context) => NotificationsScreen(),
+                  ),
                 );
               },
             ),

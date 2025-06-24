@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:shevaandrii/features/home/presentation/screens/describe_meals.dart';
 import 'package:shevaandrii/features/meal/presentation/screens/take_photo_screen.dart';
 
+import '../../../settings/screens/settings_screen.dart';
 import '../screens/home.dart';
 import '../screens/partner_screen.dart';
 
@@ -31,7 +32,7 @@ class _MyCustomBottomNavState extends State<MyCustomBottomNav>
   final List<Widget> _pages = const [
     HomeScreen(),
     PartnerScreen(),
-    PartnerScreen(),
+    SettingScreen(),
     SizedBox(), // Placeholder
   ];
 
